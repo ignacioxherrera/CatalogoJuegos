@@ -1,0 +1,90 @@
+.app {
+    background: #f1f1f1;
+    display: grid;
+    grid-template-areas: 
+    "encabezado"
+    "contenido"
+    "rodapie";
+    grid-template-columns: auto;
+    grid-template-rows: 50px 100vh auto;
+}
+
+.icons{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.384);
+    padding: 0.5% 0 0.5% 0;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+}
+
+
+
+.contenido {
+    background-color: blue;
+    grid-area: contenido;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 33.33%);
+}
+
+.fornite{
+    display: grid;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+    background-image: url(/assets/img/fortnite.jpg);
+    background-size: 100%;
+}
+
+.subtitulos{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.subti-text{
+    width: 100%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.enlaces{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 1 / span 2;
+    background-color: bisque;
+}
+
+.enlaces-text{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 10%;
+}
+
+
+#pubg{
+    background-color: aqua;
+}
+
+
+.rodapie { 
+    background-color: yellow;
+    grid-area: rodapie;
+}
+
