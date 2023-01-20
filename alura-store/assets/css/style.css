@@ -4,9 +4,14 @@
     grid-template-areas: 
     "encabezado"
     "contenido"
+    "navegaciones"
     "rodapie";
     grid-template-columns: auto;
     grid-template-rows: 50px 100vh auto;
+}
+
+header, main, article, footer{
+    margin: 0 1.25% 0 1.25%;
 }
 
 .icons{
@@ -19,7 +24,7 @@ a{
     text-decoration: none;
 }
 
-h2{
+main h2{
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.384);
     padding: 0.5% 0 0.5% 0;
@@ -35,18 +40,19 @@ h2{
 
 
 .contenido {
-    background-color: blue;
     grid-area: contenido;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(3, 33.33%);
+    gap: 4px;
 }
 
 .fornite{
     display: grid;
     grid-column: 1 / span 3;
     grid-row: 1 / span 2;
-    background-image: url(/assets/img/fortnite.jpg);
+    background-image: url(../img/fortnite.jpg);
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
@@ -67,7 +73,7 @@ h2{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column: 1 / span 2;
-    background-color: bisque;
+    background-color: #ffffff;
 }
 
 .enlaces-text{
@@ -78,13 +84,80 @@ h2{
 }
 
 
+.subt-img{
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.subt-img h2{
+    margin-top: 58%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 #pubg{
-    background-color: aqua;
+    background-image: url(../img/pubg.jpg);
+}
+
+#slack{
+    background-image: url(../img/slack.png);
+}
+
+#csgo{
+    background-image: url(../img/cs-go.jpg);
+}
+
+#whatsapp{
+    background-image: url(../img/whatsapp.png);
+}
+
+.navegaciones{
+    grid-area: "navegaciones";
+    margin-top: 2.5%;
+    grid-template-rows: repeat(4, 20%);
 }
 
 
-.rodapie { 
-    background-color: yellow;
+.article-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-header-links{
+    display: flex;
+    align-items: center;
+}
+
+.article-header-icons{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.article-main{
+    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    height: 75vh;
+}
+
+.article-main-portadas{
+    width: 100%;
+    height: 45%;
+}
+
+.article-main-text{
+    margin: 0 4%;
+    background-color: blue;
+}
+
+
+
+.rodapie {
     grid-area: rodapie;
+    margin-top: 1%;
+    width: 98.25%;
 }
 
