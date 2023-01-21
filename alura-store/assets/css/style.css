@@ -1,4 +1,6 @@
 .app {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     background: #f1f1f1;
     display: grid;
     grid-template-areas: 
@@ -10,7 +12,7 @@
     grid-template-rows: 50px 100vh auto;
 }
 
-header, main, article, footer{
+main, article{
     margin: 0 1.25% 0 1.25%;
 }
 
@@ -37,14 +39,22 @@ main h2{
     width: 30%;
 }
 
+.encab-enlaces{
+    padding-bottom: 1px;
+    transition: 0.2s;
+}
 
+@media (hover: hover) {
+    .encab-enlaces:hover {
+    border-bottom: 2px solid rgb(0, 60, 255);
+    }
+}
 
 .contenido {
     grid-area: contenido;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(3, 33.33%);
-    gap: 4px;
 }
 
 .fornite{
@@ -123,6 +133,8 @@ main h2{
 .article-header{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 1%;
+    border-bottom: 2px dashed #00000035;
 }
 
 .article-header-links{
@@ -137,27 +149,56 @@ main h2{
 }
 
 .article-main{
-    background-color: blueviolet;
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(5, 19%);
     height: 75vh;
+    gap: 1%;
+    margin: 2% 0 2% 0 ;
 }
 
 .article-main-portadas{
     width: 100%;
-    height: 45%;
+    height: 40%;
 }
 
 .article-main-text{
-    margin: 0 4%;
-    background-color: blue;
+    margin: 0 3%;
+}
+
+.article-main-text-header{
+    margin-top: 5%;
+    margin-bottom: 1%;
+    font-size: 150%;
+    font-weight: 700;
+}
+
+.article-main-text-fecha{
+    font-size: 85%;
+    color: #949393c0;
+}
+
+.article-main-text-parrafo{
+    margin-top: 15%;
+    line-height: 150%;
+    word-spacing: 0.2em;
+}
+
+.article-main-columnas{
+    background-color: #ffffff;
+}
+
+.destaque .article-main-csgo{
+    order: 3;
 }
 
 
 
 .rodapie {
     grid-area: rodapie;
-    margin-top: 1%;
-    width: 98.25%;
+    padding: 1% 0 1% 0;
+    text-align: center;
+    color: #00000075;
+    font-weight: 400;
+    background-color: #ffffff;
 }
 
