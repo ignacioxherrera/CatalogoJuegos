@@ -63,7 +63,7 @@ main h2{
     grid-row: 1 / span 2;
     background-image: url(../img/fortnite.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 .subtitulos{
@@ -74,7 +74,7 @@ main h2{
 
 .subti-text{
     width: 100%;
-    padding-bottom: 2%;
+    height: 10%;
     text-align: center;
 }
 
@@ -98,17 +98,18 @@ main h2{
     background-size: 100% 100%;
     width: 100%;
     height: 100%;
+    align-items: flex-end;
 }
 
 .subt-img h2{
-    margin-top: 58%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 #pubg{
     background-image: url(../img/pubg.jpg);
+
 }
 
 #slack{
@@ -202,3 +203,41 @@ main h2{
     background-color: #ffffff;
 }
 
+@media (max-width: 600px) {
+    .encabezado{
+        width: 100%;
+    }
+
+    .encab-enlaces{
+        display: flex;
+        align-items: center;
+    }
+
+    .encab-enlaces img{
+        margin-right: 11%;
+    }
+
+    #aplicaciones{
+        margin-right: 5%;
+    }
+
+    .contenido{
+        grid-template-rows: repeat(4, 25%);
+        grid-template-columns: repeat(3, 33.33%);
+    }
+
+    #pubg{
+        grid-column-start: 1;
+    }
+
+    #csgo{
+        grid-row-start: 3;
+        grid-column-start: 3;
+    }
+
+    .article-main{
+        grid-template-columns: repeat(2, 50%);
+        height: 250vh;
+    }
+
+  }
